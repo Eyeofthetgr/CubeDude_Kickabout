@@ -2,12 +2,12 @@
 
 [ext_resource path="res://GFX/Ball.material" type="Material" id=1]
 
-[sub_resource type="SphereMesh" id=2]
+[sub_resource type="SphereMesh" id=1]
 material = ExtResource( 1 )
 radius = 0.25
 height = 0.5
 
-[sub_resource type="SphereShape" id=3]
+[sub_resource type="SphereShape" id=2]
 radius = 0.25
 
 [node name="Ball" type="RigidBody"]
@@ -17,8 +17,8 @@ continuous_cd = true
 can_sleep = false
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 2 )
+mesh = SubResource( 1 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
