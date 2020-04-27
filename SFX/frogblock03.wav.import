@@ -7,7 +7,10 @@ path="res://.import/frogblock03.wav-66b852d3c2b8a0c54e29c9464128ee85.sample"
 [deps]
 
 source_file="res://SFX/frogblock03.wav"
+source_md5="307cddb4844a911912d5dfabb58b7f78"
+
 dest_files=[ "res://.import/frogblock03.wav-66b852d3c2b8a0c54e29c9464128ee85.sample" ]
+dest_md5="196c3779ec71399190c34650e2f95393"
 
 [params]
 

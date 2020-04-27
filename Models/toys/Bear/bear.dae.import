@@ -7,7 +7,10 @@ path="res://.import/bear.dae-08eb164e442eda5014191e8365960ea4.scn"
 [deps]
 
 source_file="res://Models/toys/Bear/bear.dae"
+source_md5="ae60eed0367987e08d1886242069404f"
+
 dest_files=[ "res://.import/bear.dae-08eb164e442eda5014191e8365960ea4.scn" ]
+dest_md5="5e88c15749b1d74c7ca092cd0506a25c"
 
 [params]
 

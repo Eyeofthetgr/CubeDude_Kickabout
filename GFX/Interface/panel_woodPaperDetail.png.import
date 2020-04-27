@@ -3,21 +3,20 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/panel_woodPaperDetail.png-d53f266cde058a98cd325d65c200e010.stex"
-metadata={
-"vram_texture": false
-}
 
 [deps]
 
 source_file="res://GFX/Interface/panel_woodPaperDetail.png"
+source_md5="488ce15d2dd8f9f3b8fbe35ad60a3e3d"
+
 dest_files=[ "res://.import/panel_woodPaperDetail.png-d53f266cde058a98cd325d65c200e010.stex" ]
+dest_md5="bf777429f9ba969ea3ebb932803cd44d"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -27,7 +26,6 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
-process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

@@ -7,7 +7,10 @@ path="res://.import/airhorn.ogg-0cb255bba6270237012414147a9cae8d.oggstr"
 [deps]
 
 source_file="res://SFX/airhorn.ogg"
+source_md5="0f72563f9321c47bd76855dd0c0e8231"
+
 dest_files=[ "res://.import/airhorn.ogg-0cb255bba6270237012414147a9cae8d.oggstr" ]
+dest_md5="66e33d7c01d37ca4dd923f78a56e01b6"
 
 [params]
 

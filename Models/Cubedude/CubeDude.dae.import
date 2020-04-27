@@ -7,7 +7,10 @@ path="res://.import/CubeDude.dae-fc76cca31a776229c22a54f3c0b04ec2.scn"
 [deps]
 
 source_file="res://Models/Cubedude/CubeDude.dae"
+source_md5="a33ad2a36d4df177883625e9d726e612"
+
 dest_files=[ "res://.import/CubeDude.dae-fc76cca31a776229c22a54f3c0b04ec2.scn" ]
+dest_md5="cd149b4b22bf1d2b4bd14faf9b6d7dbc"
 
 [params]
 

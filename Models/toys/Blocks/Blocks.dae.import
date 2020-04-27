@@ -7,7 +7,10 @@ path="res://.import/Blocks.dae-0647bac51f80aedb1412043ec1d707cb.scn"
 [deps]
 
 source_file="res://Models/toys/Blocks/Blocks.dae"
+source_md5="b4fa59cd2f569376718c911f3ddddefb"
+
 dest_files=[ "res://.import/Blocks.dae-0647bac51f80aedb1412043ec1d707cb.scn" ]
+dest_md5="f685695309d920fb0eaa62bb84fe4169"
 
 [params]
 

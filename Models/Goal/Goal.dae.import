@@ -7,7 +7,10 @@ path="res://.import/Goal.dae-8d617b8f493216c0a8ebed80c9324f29.scn"
 [deps]
 
 source_file="res://Models/Goal/Goal.dae"
+source_md5="0c2ab466d0f80e3e7508623a8bf54843"
+
 dest_files=[ "res://.import/Goal.dae-8d617b8f493216c0a8ebed80c9324f29.scn" ]
+dest_md5="500c1ec9b6c65ece2270fe147f4a0f6f"
 
 [params]
 

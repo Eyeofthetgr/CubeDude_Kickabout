@@ -4,22 +4,20 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/tabletop.png-ec96423346d37a92c90475c23d5711b3.s3tc.stex"
 path.etc2="res://.import/tabletop.png-ec96423346d37a92c90475c23d5711b3.etc2.stex"
-metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
-}
 
 [deps]
 
 source_file="res://GFX/tabletop.png"
+source_md5="e8f5375065fd8094cb74c78f3ab35816"
+
 dest_files=[ "res://.import/tabletop.png-ec96423346d37a92c90475c23d5711b3.s3tc.stex", "res://.import/tabletop.png-ec96423346d37a92c90475c23d5711b3.etc2.stex" ]
+dest_md5="a3ae3a58a535cee7a8e3fc6cd967676f"
 
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -29,7 +27,6 @@ flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
-process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=false

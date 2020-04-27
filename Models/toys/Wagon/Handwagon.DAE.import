@@ -7,7 +7,10 @@ path="res://.import/Handwagon.DAE-fcf672d115c85a360552d365d8e9de1e.scn"
 [deps]
 
 source_file="res://Models/toys/Wagon/Handwagon.DAE"
+source_md5="1eaef1c25373ad18fc2dd902b22de0fd"
+
 dest_files=[ "res://.import/Handwagon.DAE-fcf672d115c85a360552d365d8e9de1e.scn" ]
+dest_md5="3f492527a50f2907943f01619e544517"
 
 [params]
 

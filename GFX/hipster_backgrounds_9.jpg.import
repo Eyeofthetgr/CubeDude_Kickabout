@@ -4,22 +4,20 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/hipster_backgrounds_9.jpg-b2923aba9c7b52295dc1046245db52e7.s3tc.stex"
 path.etc2="res://.import/hipster_backgrounds_9.jpg-b2923aba9c7b52295dc1046245db52e7.etc2.stex"
-metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
-}
 
 [deps]
 
 source_file="res://GFX/hipster_backgrounds_9.jpg"
+source_md5="9084a73057a8d49108f3e744d44a8959"
+
 dest_files=[ "res://.import/hipster_backgrounds_9.jpg-b2923aba9c7b52295dc1046245db52e7.s3tc.stex", "res://.import/hipster_backgrounds_9.jpg-b2923aba9c7b52295dc1046245db52e7.etc2.stex" ]
+dest_md5="8855c95b38568e8996951db13c32aca3"
 
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
 flags/filter=true
@@ -29,7 +27,6 @@ flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
-process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=false

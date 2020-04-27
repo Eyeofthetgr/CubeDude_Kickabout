@@ -7,7 +7,10 @@ path="res://.import/dominoespizzaakacatchme.ogg-b6cd0e5b697956beaf67e264d777cf5b
 [deps]
 
 source_file="res://SFX/dominoespizzaakacatchme.ogg"
+source_md5="566f224ed57e5b83ddba49f57565f51e"
+
 dest_files=[ "res://.import/dominoespizzaakacatchme.ogg-b6cd0e5b697956beaf67e264d777cf5b.oggstr" ]
+dest_md5="948e29f00caa3287cda88d3f89c067b8"
 
 [params]
 

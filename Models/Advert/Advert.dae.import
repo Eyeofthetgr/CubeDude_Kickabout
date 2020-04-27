@@ -7,7 +7,10 @@ path="res://.import/Advert.dae-c1fcac01e2c4c46893a12254a23bc47b.scn"
 [deps]
 
 source_file="res://Models/Advert/Advert.dae"
+source_md5="af4ce39bdde60155a80fd82d7380af72"
+
 dest_files=[ "res://.import/Advert.dae-c1fcac01e2c4c46893a12254a23bc47b.scn" ]
+dest_md5="3e427f9cac6a91b3f7a487b6a73f11d2"
 
 [params]
 
