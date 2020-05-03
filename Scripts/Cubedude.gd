@@ -27,7 +27,6 @@ func reset():
 	can_move(true)
 
 
-
 func move():
 	if Input.is_action_pressed("up_%s" % player_id) and not Input.is_action_pressed("down_%s" % player_id):
 		motion.z = -1
@@ -42,7 +41,6 @@ func move():
 		motion.x = 1
 	else: 
 		motion.x = 0
-		
 	move_and_slide((motion.normalized() * speed), UP)
 
 
@@ -64,6 +62,7 @@ func animate():
 func face_forward():
 	if not motion.x == 0 or not motion.z == 0:
 		look_at(Vector3(-motion.x, 0, -motion.z)*speed, UP)
+	
 	
 func can_move(value):
 	can_move = value

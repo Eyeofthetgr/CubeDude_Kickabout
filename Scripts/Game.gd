@@ -15,7 +15,6 @@ func reset_pitch():
 	get_tree().call_group("player", "reset")
 
 
-
 func _on_GoalDetection_body_entered(body, goal_id):
 	Ball.axis_lock_linear_x = true
 	Ball.axis_lock_linear_y = true
@@ -23,7 +22,6 @@ func _on_GoalDetection_body_entered(body, goal_id):
 	get_tree().call_group("player", "can_move", false)
 	print("Player " + str(goal_id) + " has scored!")
 	$Timer.start()
-	
 
 
 func _on_Timer_timeout():
