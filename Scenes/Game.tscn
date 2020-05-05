@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Pitch.tscn" type="PackedScene" id=2]
@@ -8,17 +8,19 @@
 [ext_resource path="res://Models/Cubedude/CubeDubeBlue.material" type="Material" id=6]
 [ext_resource path="res://Scenes/Goal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Models/Goal/GoalBlue.material" type="Material" id=8]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Wagon.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/floor.material" type="Material" id=11]
-[ext_resource path="res://Scenes/BackWall.material" type="Material" id=12]
-[ext_resource path="res://Scenes/SkirtingBoard.material" type="Material" id=13]
-[ext_resource path="res://Scenes/Block.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Models/toys/Bear/bear.dae" type="PackedScene" id=15]
-[ext_resource path="res://Models/Advert/Advert.dae" type="PackedScene" id=16]
-[ext_resource path="res://GFX/721098.jpg" type="Texture" id=17]
-[ext_resource path="res://GFX/ronaldo-cartoon-drawing-57.jpg" type="Texture" id=18]
-[ext_resource path="res://SFX/196461__paulw2k__football-crowd-goal-cutted.wav" type="AudioStream" id=19]
+[ext_resource path="res://Scripts/DirectionalLight.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/SpotLight.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Wagon.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/floor.material" type="Material" id=13]
+[ext_resource path="res://Scenes/BackWall.material" type="Material" id=14]
+[ext_resource path="res://Scenes/SkirtingBoard.material" type="Material" id=15]
+[ext_resource path="res://Scenes/Block.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Models/toys/Bear/bear.dae" type="PackedScene" id=17]
+[ext_resource path="res://Models/Advert/Advert.dae" type="PackedScene" id=18]
+[ext_resource path="res://GFX/721098.jpg" type="Texture" id=19]
+[ext_resource path="res://GFX/ronaldo-cartoon-drawing-57.jpg" type="Texture" id=20]
+[ext_resource path="res://SFX/196461__paulw2k__football-crowd-goal-cutted.wav" type="AudioStream" id=21]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -42,6 +44,25 @@ subdivide_depth = 0
 
 points = PoolVector3Array( -1, 5, 8, 1, 5, -8, 1, 5, 8, -1, 5, -8, -1, -5, 8, 1, -5, -8, 1, -5, 8, -1, -5, -8, 1, 5, 8, -1, 5, -8, 1, 5, -8, -1, 5, 8, 1, -5, 8, -1, -5, -8, 1, -5, -8, -1, -5, 8, 1, 5, 8, -1, -5, 8, -1, 5, 8, 1, -5, 8, 1, 5, -8, -1, -5, -8, -1, 5, -8, 1, -5, -8 )
 
+[sub_resource type="Animation" id=12]
+
+resource_name = "Dim_Light"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
 [sub_resource type="PlaneMesh" id=5]
 
 size = Vector2( 100, 100 )
@@ -50,7 +71,7 @@ subdivide_depth = 0
 
 [sub_resource type="PlaneMesh" id=6]
 
-material = ExtResource( 12 )
+material = ExtResource( 14 )
 size = Vector2( 75, 50 )
 subdivide_width = 0
 subdivide_depth = 0
@@ -86,7 +107,7 @@ params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
-albedo_texture = ExtResource( 17 )
+albedo_texture = ExtResource( 19 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -146,7 +167,7 @@ params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
-albedo_texture = ExtResource( 18 )
+albedo_texture = ExtResource( 20 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -200,7 +221,7 @@ _sections_unfolded = [ "Axis Lock", "Collision", "Transform" ]
 
 [node name="Camera" type="Camera" parent="." index="2"]
 
-transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 5, 14 )
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 8, 14 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = ExtResource( 4 )
@@ -216,8 +237,6 @@ far = 100.0
 _sections_unfolded = [ "Transform" ]
 
 [node name="Players" type="Node" parent="." index="3"]
-
-editor/display_folded = true
 
 [node name="Player1" parent="Players" index="0" instance=ExtResource( 5 )]
 
@@ -533,9 +552,9 @@ disabled = false
 
 [node name="Lights" type="Node" parent="." index="6"]
 
-editor/display_folded = true
-
-[node name="DirectionalLight" type="DirectionalLight" parent="Lights" index="0"]
+[node name="DirectionalLight" type="DirectionalLight" parent="Lights" index="0" groups=[
+"celebrant",
+]]
 
 transform = Transform( 0.679351, -0.27897, 0.678718, 0, 0.924919, 0.380165, -0.733814, -0.258265, 0.628344, 15.5471, 8.88746, 13.8991 )
 layers = 1
@@ -561,7 +580,44 @@ directional_shadow_normal_bias = 0.8
 directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
+script = ExtResource( 9 )
 _sections_unfolded = [ "Light", "Shadow" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Lights/DirectionalLight" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Dim_Light = SubResource( 12 )
+blend_times = [  ]
+
+[node name="SpotLight" type="SpotLight" parent="Lights" index="1" groups=[
+"celebrant",
+]]
+
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6, 0 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 2.5
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+spot_range = 12.1775
+spot_attenuation = 1.0
+spot_angle = 20.0
+spot_angle_attenuation = 1.0
+script = ExtResource( 10 )
+_sections_unfolded = [ "Light", "Shadow", "Spot", "Transform" ]
 
 [node name="Timer" type="Timer" parent="." index="7"]
 
@@ -589,13 +645,11 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="GUI" parent="." index="9" instance=ExtResource( 9 )]
+[node name="GUI" parent="." index="9" instance=ExtResource( 11 )]
 
 [node name="Decor" type="Node" parent="." index="10"]
 
-editor/display_folded = true
-
-[node name="Wagon" parent="Decor" index="0" instance=ExtResource( 10 )]
+[node name="Wagon" parent="Decor" index="0" instance=ExtResource( 12 )]
 
 transform = Transform( 3.53553, 0, 3.53553, 0, 5, 0, -3.53553, 0, 3.53553, -12.8439, 0.052225, 1.11809 )
 _sections_unfolded = [ "Transform" ]
@@ -614,7 +668,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 5 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 11 )
+material/0 = ExtResource( 13 )
 _sections_unfolded = [ "material" ]
 
 [node name="BackWall" type="MeshInstance" parent="Decor" index="2"]
@@ -648,35 +702,35 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 7 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 13 )
+material/0 = ExtResource( 15 )
 _sections_unfolded = [ "Transform", "material" ]
 
-[node name="Block1" parent="Decor" index="4" instance=ExtResource( 14 )]
+[node name="Block1" parent="Decor" index="4" instance=ExtResource( 16 )]
 
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -15.6899, 1, -4.33112 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Block2" parent="Decor" index="5" instance=ExtResource( 14 )]
+[node name="Block2" parent="Decor" index="5" instance=ExtResource( 16 )]
 
 transform = Transform( -0.736326, -0.676627, 3.85921e-08, -1.45276e-08, -4.12266e-08, -1, 0.676626, -0.736326, 2.05265e-08, -13.9087, 1, -6.19082 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Block3" parent="Decor" index="6" instance=ExtResource( 14 )]
+[node name="Block3" parent="Decor" index="6" instance=ExtResource( 16 )]
 
 transform = Transform( -0.0148798, 0.679571, -0.733458, 0.999794, -4.37024e-08, -0.020283, -0.0137838, -0.733609, -0.679431, -14.7981, 2.97566, -5.20294 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Bear" parent="Decor" index="7" instance=ExtResource( 15 )]
+[node name="Bear" parent="Decor" index="7" instance=ExtResource( 17 )]
 
 transform = Transform( -1.06066, 0, 1.06066, 0, 1.5, 0, -1.06066, 0, -1.06066, 16, 0, -5.99443 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Advert" parent="Decor" index="8" instance=ExtResource( 16 )]
+[node name="Advert" parent="Decor" index="8" instance=ExtResource( 18 )]
 
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2, -9.29831 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeshInstance" type="MeshInstance" parent="Decor" index="9"]
+[node name="Picture1" type="MeshInstance" parent="Decor" index="9"]
 
 transform = Transform( -1, -8.74228e-08, 4.37114e-08, 4.37114e-08, 1.91069e-15, 1, -8.74228e-08, 1, 1.91069e-15, -9, 6.8, -11.98 )
 layers = 1
@@ -693,7 +747,7 @@ skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeshInstance2" type="MeshInstance" parent="Decor" index="10"]
+[node name="Picture2" type="MeshInstance" parent="Decor" index="10"]
 
 transform = Transform( -1, -8.74228e-08, 4.37114e-08, 4.37114e-08, 1.91069e-15, 1, -8.74228e-08, 1, 1.91069e-15, 9, 6.8, -11.98 )
 layers = 1
@@ -712,7 +766,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Airhorn" type="AudioStreamPlayer" parent="." index="11"]
 
-stream = ExtResource( 19 )
+stream = ExtResource( 21 )
 volume_db = -5.0
 autoplay = false
 mix_target = 0
