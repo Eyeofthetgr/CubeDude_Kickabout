@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/237684__quistard__football-crowd-near-miss-ooh-2-southampton-vs-hull-at-saint-mary-s-stadium.wav-4d900680de8711992ebd65c92af4582d.sample"
+
+[deps]
+
+source_file="res://SFX/237684__quistard__football-crowd-near-miss-ooh-2-southampton-vs-hull-at-saint-mary-s-stadium.wav"
+source_md5="3d6b4242fedd5bdb7ccea1df03312286"
+
+dest_files=[ "res://.import/237684__quistard__football-crowd-near-miss-ooh-2-southampton-vs-hull-at-saint-mary-s-stadium.wav-4d900680de8711992ebd65c92af4582d.sample" ]
+dest_md5="c6cb1d0abaf667f4e59087abee20345c"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

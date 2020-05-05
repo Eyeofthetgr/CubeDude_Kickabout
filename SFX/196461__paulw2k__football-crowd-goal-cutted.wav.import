@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/196461__paulw2k__football-crowd-goal-cutted.wav-8642ca43918bfa75cdb7215bbe074417.sample"
+
+[deps]
+
+source_file="res://SFX/196461__paulw2k__football-crowd-goal-cutted.wav"
+source_md5="02bb805abd27d58177aee4cef2ee6162"
+
+dest_files=[ "res://.import/196461__paulw2k__football-crowd-goal-cutted.wav-8642ca43918bfa75cdb7215bbe074417.sample" ]
+dest_md5="0b4148e2e4a639b5ae2141c29c0002e2"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
